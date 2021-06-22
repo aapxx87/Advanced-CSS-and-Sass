@@ -34,7 +34,95 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  /* 2.1 */
+  position: relative;
 }
+
+/* Step 2 */
+.logo-box {
+  /* положение absolute определяется относительно родительского элемента */
+  position: absolute;
+  top: 40px;
+  left: 40px;
+
+}
+
+
+.logo {
+  /* 2.2 - width высчитается браузером автоматически*/
+  height: 35px;
+}
+
+
+/* Step 6 - размещаем по середине страницы */
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* но только при параметрах как выше 50% будет слева и сверху только до края блока (левого и верха), но нам нужно чтобы в центре находилась середина контейнера, а не его края */
+  /* мы сдвигаем элемент на 50% его ширины и высоты */
+  transform: translate(-50%, -50%);
+}
+
+
+/* Step 4 */
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* 4.1 */
+.heading-primary-main {
+  /* span - это инлайн элемент, нам для размещения текста на разных строчках нужно сделать его блочным */
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+}
+
+/* 4.2 */
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

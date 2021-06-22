@@ -19,7 +19,23 @@
 
 <!-- 6 -->
 <header class="header">
-  Some text...
+
+  <!-- step 1 - разметка для лого, картинка - это инлайн элемент, поэтому хорошей практикой является создать div в который поместить изображение, а затем соответственно позиционировать уже расположение контейнера на странице, то есть при помощи контейнера мы позиционируем саму картинку -->
+  <div class="logo-box">
+    <img src="img/logo-white.png" alt="Logo" class="logo">
+  </div>
+
+
+
+  <!-- Step 4 -->
+  <div class="text-box">
+
+    <!-- Step 3 - для расположения текста на двух строчках используем span -->
+    <h1 class="heading-primary">
+      <span class="heading-primary-main">Outdoors</span>
+      <span class="heading-primary-sub">is where life happens</span>
+    </h1>
+  </div>
 </header>
 
 

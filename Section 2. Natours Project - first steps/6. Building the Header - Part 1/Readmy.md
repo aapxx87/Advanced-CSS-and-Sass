@@ -7,7 +7,9 @@ _Topics_:
 - how to set project-wide font definitions
 - how to clip parts of elements using clip-path
 
-
+- добавляем фоновую картинку на 95% высоты экрана
+- добавляем градиент к картинке
+- обрезаем картинку снизу по диагонали
 
 _Steps_:
 1) index.html -  создаем структуру для header
