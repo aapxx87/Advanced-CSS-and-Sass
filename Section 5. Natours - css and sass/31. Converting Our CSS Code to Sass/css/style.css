@@ -21,26 +21,23 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   /* 7 */
-  position: relative; }
-
-/* 7 */
-.logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px; }
-
-/* 7 */
-.logo {
-  height: 35px; }
-
-/* 7 */
-.text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* 9 */
-  text-align: center; }
+  position: relative;
+  /* 7 */
+  /* 7 */
+  /* 7 */ }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 9 */
+    text-align: center; }
 
 /* 7 */
 .heading-primary {
@@ -49,28 +46,26 @@ body {
   /* 8 */
   backface-visibility: hidden;
   /* 9 */
-  margin-bottom: 60px; }
-
-/* 7 */
-.heading-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  /* 8 */
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in; }
-
-/* 7 */
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  /* 8 */
-  animation-name: moveInRight;
-  animation-duration: 1s; }
+  margin-bottom: 60px;
+  /* 7 */
+  /* 7 */ }
+  .heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    /* 8 */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+  .heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    /* 8 */
+    animation-name: moveInRight;
+    animation-duration: 1s; }
 
 /* 8 */
 @keyframes moveInLeft {
@@ -94,55 +89,53 @@ body {
     opacity: 1;
     transform: translateX(0); } }
 
-/* 9 */
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 15px 40px;
-  display: inline-block;
-  border-radius: 100px;
-  transition: all .2s;
+.btn {
+  /* 9 */
+  /* 9 */
+  /* 9 */
   /* 10 */
-  position: relative; }
-
-/* 9 */
-.btn-white {
-  background-color: #fff;
-  color: #777; }
-
-/* 9 */
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
-
-/* 9 */
-.btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
-
-/* 10 */
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s; }
-
-/* 10 */
-.btn-white::after {
-  background-color: #fff;
-  color: #777; }
-
-/* 10 */
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+  /* 10 */
+  /* 9 */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    /* 10 */
+    position: relative; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* 10 */ }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s; }
+  .btn-animated {
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards; }
+  .btn-white {
+    background-color: #fff;
+    color: #777;
+    /* 10 */ }
+    .btn-white::after {
+      background-color: #fff;
+      color: #777; }
 
 /* 10 */
 @keyframes moveInBottom {
@@ -152,10 +145,5 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
-
-/* 10 */
-.btn-animated {
-  animation: moveInBottom .5s ease-out .75s;
-  animation-fill-mode: backwards; }
 
 /* f */

@@ -1,0 +1,128 @@
+// Step 3
+.row {
+  // нам нужно определить длинну row, устанавливаем 1140px, но лучше устанавливать размеры в условных единицах = rem, который считается относительно размера шрифта установленного в body, там у нас 10px (но записанных в %), поэтому 1140 / 10 = 114rem
+  // ставим не просто width а max-width, тогда это будет максимальная ширина если позволяет ширина окна, иначе она будет адаптироваться (уменьшаться - 100% от доступного простарнства)
+  max-width: $grid-width;
+  background-color: #eee;
+
+  // центрируем row по центру экрана - центрирование одного блочного элемента в нутри другого
+  margin: 0 auto;
+
+
+  // нам не нужен нижний отступ у последней строки, нужно его убрать у нее используя для этого last child pseudo-class - берем все элементы с классом row кроме последнего
+  // .row:last-child - так бы мы выбрали именно последний элемент с данным классом, при помощи not - мы делаем строго обратное, исключаем последний элемент
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  // 3.3 - вставляем @mixin clearfix
+  @include clearfix;
+
+  // чтобы в каждой колонке не повторять одинаковую часть кода     background-color: orangered; float: left; &:not(:last-child) {margin-right: $gutter-horizontal;} используем селектор атрибута
+  // выбираем все элементы с интерсующим нас классом, символ ^ означает что после col может быть продолжение
+  // [class^="col-"] {
+  //   background-color: orangered;
+  //   float: left;
+  //
+  //   &:not(:last-child) {
+  //     margin-right: $gutter-horizontal;
+  //   }
+  // }
+
+
+  // 3.2 - стилизуем колонки
+
+  .col-1-of-2 {
+    // что собой представляет width колонки? это width всего row - gutter (рwite-space после колонки)/2. то есть col width = (row width - gutter)/2
+    // для рассчета width используем функцию calc(), в ней мужно делать вычисляя миксуя юниты
+    // чтобы использовать перемнные в sass нам нужно брать их в специальные скобки #{}
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    background-color: orangered;
+    float: left;
+
+    // отступ справа у нас должен быть у всех колонок кроме последней
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-1-of-3 {
+    // в данном случае у нас будет два gutter (margin-right) после двух первых колонок, но не после последней третьей и делить всю длинну мы будем соотвенно не на два, а на три, так как у нас три колонки
+    width: calc((100% - 2 * #{$gutter-horizontal}) / 3);
+    background-color: orangered;
+    float: left;
+
+    // отступ справа у нас должен быть у всех колонок кроме последней
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$gutter-horizontal}) / 4);
+    background-color: orangered;
+    float: left;
+
+    // отступ справа у нас должен быть у всех колонок кроме последней
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+
+  .col-2-of-3 {
+    width: calc(((100% - 2 * #{$gutter-horizontal}) / 3 * 2) + #{$gutter-horizontal});
+    background-color: orangered;
+    float: left;
+
+    // отступ справа у нас должен быть у всех колонок кроме последней
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+
+  .col-2-of-4 {
+    width: calc(((100% - 3 * #{$gutter-horizontal}) / 4 * 2) + #{$gutter-horizontal});
+    background-color: orangered;
+    float: left;
+
+    // отступ справа у нас должен быть у всех колонок кроме последней
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+
+  .col-3-of-4 {
+    width: calc(((100% - 3 * #{$gutter-horizontal}) / 4 * 3) + 2 * #{$gutter-horizontal});
+    background-color: orangered;
+    float: left;
+
+    // отступ справа у нас должен быть у всех колонок кроме последней
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// f

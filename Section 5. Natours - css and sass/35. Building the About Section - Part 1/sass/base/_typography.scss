@@ -1,0 +1,61 @@
+
+// 28
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+$color-gray-dark: #777;
+$color-white: #fff;
+
+// 31
+$color-black: #000;
+
+
+/* 6 */
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $color-gray-dark;
+  padding: 30px;
+}
+
+
+/* 7 */
+.heading-primary {
+  color: $color-white;
+  text-transform: uppercase;
+
+  /* 8 */
+  backface-visibility: hidden;
+
+  /* 9 */
+  margin-bottom: 60px;
+
+  /* 7 */
+  &-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    /* 8 */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+  }
+
+
+  /* 7 */
+  &-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+
+    /* 8 */
+    animation-name: moveInRight;
+    animation-duration: 1s;
+  }
+}
